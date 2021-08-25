@@ -13,7 +13,9 @@ async function style() {
     //2. pass file through sass compiler
     .pipe(sass())
     //3. where do i save the compiled css?
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./css'))
+    //4. steam changes to all browser
+    .pipe(browserSync.stream());
 }
 
 exports.style = style;
