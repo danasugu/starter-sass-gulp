@@ -11,7 +11,7 @@ async function style() {
   return await gulp
     .src('./scss/**/*.scss')
     //2. pass file through sass compiler
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     //3. where do i save the compiled css?
     .pipe(gulp.dest('./css'))
     //4. steam changes to all browser
