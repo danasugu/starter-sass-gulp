@@ -1,5 +1,7 @@
+$color: hsl(76, 100%, 50%);
+
 body {
-  background-color: purple;
+  background-color: $color;
   color: #fff;
 
   height: 400vh;
