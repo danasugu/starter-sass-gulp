@@ -6,8 +6,14 @@ const browserSync = require('browser-sync').create();
 
 function style() {
   //1. where is my scss file
-  return gulp.src('./scss/**/*.scss')
-  //2. pass file through sass compiler
-  //3. where do i save the compiled css?
-
+  return (
+    gulp
+      .src('./scss/**/*.scss')
+      //2. pass file through sass compiler
+      .pipe(sass())
+      //3. where do i save the compiled css?
+      .pipe(gulp.dest('./css'))
+  );
 }
+
+exports.style = style;
