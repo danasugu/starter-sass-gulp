@@ -1,7 +1,7 @@
 const gulp = require('gulp');
-// const sass = require('gulp-sass');
-const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass')(require('sass'));
+// const sass = require('gulp-sass'); // not working in gulp 4 //
+const browserSync = require('browser-sync').create();
 const del = require('del');
 
 //compile scss into css
