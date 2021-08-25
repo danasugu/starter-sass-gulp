@@ -18,4 +18,11 @@ async function style() {
     .pipe(browserSync.stream());
 }
 
+function watch() {
+  browserSync.init({
+    server: {
+      baseDir: './',
+    },
+  });
+}
 exports.style = style;
